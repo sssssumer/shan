@@ -1,0 +1,60 @@
+{
+    "formTemplate": "normal",
+    "head": {
+      "type": "element",
+      "elementType": "Header",
+      "elementProps": {
+        "canBack": true,
+        "titleElement": {
+          "type": "element",
+          "elementType": "FormTitle",
+          "elementProps": {
+            "containerStyle": {
+              "alignItems": "center",
+              "justifyContent": "center"
+            }
+          }
+        }
+      }
+    },
+    "items": [
+      "SaleOrganizationID_Head",
+      "DistributionChannelID_Head",
+      "DivisionID_Head",
+      "DocumentNumber_Head",
+      {
+        "type": "element",
+        "elementType": "GridView",
+        "elementProps": {
+          "yigoid": "grid0",
+          "clickMode": "dblclick",
+          "removeable": false,
+          "showHead": false,
+          "headTitle": "",
+          "useBodyScroll": true,
+          "hideAction": false,
+          "primaryKey": "DocumentNumber",
+          "secondKey": [
+            "SaleOrganizationID",
+            "DistributionChannelID"
+          ],
+          "tertiaryKey": [
+            "DivisionID",
+            "SoldToPartyID"
+          ]
+        }     
+      }
+    ],
+    "action": {
+    },
+    "foot": {
+      "type": "element",
+      "elementType": "SegementToolbar",
+      "elementProps": {
+        "showItems": [ "Query", "UIClose" ]
+      }
+    },
+    "controls": {
+
+    }
+  }

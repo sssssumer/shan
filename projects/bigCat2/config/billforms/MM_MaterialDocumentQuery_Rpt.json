@@ -1,0 +1,108 @@
+{
+    "formTemplate": "normal",
+    "head": {
+        "type": "element",
+        "elementType": "Header",
+        "elementProps": {
+            "canBack": true,
+            "titleElement": {
+                "type": "element",
+                "elementType": "FormTitle",
+                "elementProps": {
+                    "containerStyle": {
+                        "alignItems": "center",
+                        "justifyContent": "center"
+                    }
+                }
+            }
+        }
+    },
+    "items": [
+      "DocumentNumber_Cond_NODB4Other",
+      "PlantID_Cond_NODB4Other",
+      "MaterialID_Cond_NODB4Other",
+      "MoveTypeID_Cond_NODB4Other",
+      "BatchCode_Cond_NODB4Other",
+      "VENDORID_Cond_NODB4Other",
+      "StorageLocationID_Cond_NODB4Other",
+      "SpecialIdentity_Cond_NODB4Other",
+      "CustomerID_Cond_NODB4Other",
+      "PostingDate_From_Cond_NODB4Other",
+      "PostingDate_To_Cond_NODB4Other",
+      "MakerID_Cond_NODB4Other",
+      "ShowCol_NODB4Other",
+      "StatisticalDimension_NODB4Other",
+      "DocumentNumber1_Cond_NODB4Other",
+      "grid0"
+    ],
+    "action": {
+        
+    },
+    "foot": {
+        "type": "element",
+        "elementType": "SegementToolbar",
+      "elementProps": {
+        "showItems": [ "Query", "UIClose" ]
+      }
+    },
+    "controls": {
+      "grid0": {
+        "hasMore": true,
+        "control": "GridView",
+        "clickMode": "dblclick",
+        "showHead": false,
+        "headTitle": "",
+        "useBodyScroll": true,
+        "hideAction": true,
+        "removeType": "normal",
+        "removeColumn": "DeleteDtl",
+        "onRefresh": false,
+        "refreshing": false,
+        "removeable": true,
+        "primaryKey": "DocumentNumber",
+        "secondKey": [
+          "MaterialText"
+        ],
+        "tertiaryKey": [
+            "PlantID",
+            "MoveTypeID"
+        ],
+        "rightElement": {
+          "type": "element",
+          "elementType": "FlexBox",
+          "elementProps": {
+            "direction": "column",
+            "style": {
+              "justifyContent": "space-between"
+            },
+            "items": [
+              {
+                "type": "element",
+                "elementType": "SplitText",
+                "elementProps": {
+                  "caption": "基本计量单位：",
+                  "yigoid": "BaseUnitID",
+                  "style": {
+                    "fontSize": 12,
+                    "textAlign": "right"
+                  }
+                }
+              },
+              {
+                "type": "element",
+                "elementType": "SplitText",
+                "elementProps": {
+                  "caption": "数量：",
+                  "yigoid": "BaseQuantity",
+                  "style": {
+                    "fontSize": 12,
+                    "textAlign": "right"
+                  }
+                }
+              }
+            ]
+          }
+        }
+      }
+    }
+}

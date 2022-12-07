@@ -1,0 +1,53 @@
+{
+    "formTemplate": "normal",
+    "head": {
+      "type": "element",
+      "elementType": "Header",
+      "elementProps": {
+        "canBack": true,
+        "titleElement": {
+          "type": "element",
+          "elementType": "FormTitle",
+          "elementProps": {
+            "containerStyle": {
+              "alignItems": "center",
+              "justifyContent": "center"
+            }
+          }
+        }
+      }
+    },
+    "items": [
+      "Context",
+      "Query",
+      {
+        "type": "element",
+        "elementType": "GridView",
+        "elementProps": {
+          "yigoid": "grid0",
+          "clickMode": "dblclick",
+          "removeable": false,
+          "showHead": false,
+          "headTitle": "",
+          "useBodyScroll": true,
+          "hideAction": false,
+          "primaryKey": "Code",
+          "secondKey": [
+            "S1"
+          ]
+        }     
+      }
+    ],
+    "action": {
+    },
+    "foot": {
+      "type": "element",
+      "elementType": "SegementToolbar",
+      "elementProps": {
+        "showItems": [ "OK", "Cancel" ]
+      }
+    },
+    "controls": {
+
+    }
+  }

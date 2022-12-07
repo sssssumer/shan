@@ -1,0 +1,115 @@
+{
+    "formTemplate": "tabs",
+    "mergeGridLayout": true,
+    "mergeGridLayoutTitle": "基础",
+    "head": {
+        "type": "element",
+        "elementType": "Header",
+        "elementProps": {
+            "canBack": true,
+            "titleElement": {
+                "type": "element",
+                "elementType": "FormTitle",
+                "elementProps": {
+                    "containerStyle": {
+                        "alignItems": "center",
+                        "justifyContent": "center"
+                    }
+                }
+            }
+        }
+    },
+  "foot": {
+    "type": "element",
+    "elementType": "SegementToolbar",
+    "elementProps": {
+        "showItems":["BillNew","BillEdit","BillSave","BillCancel","BillDelete"]
+    }
+},
+    "tabs": [{
+        "title": "基本",
+        "items": [
+          {
+            "type": "element",
+            "elementType": "Card",
+            "elementProps": {
+              "collapseable": false,
+              "headIcon": "",
+              "title": "基本信息",
+              "content": {
+                "type": "element",
+                "elementType": "CellLayoutTemplate",
+                "elementProps": {
+                  "textStyle": {
+                    "textAlign": "right",
+                    "justifyContent": "flex-end"
+                  },
+                  "titleStyle": {
+                    "justifyContent": "flex-start",
+                    "fontSize": "15",
+                    "color": "#666666"
+                  },
+                  "layoutStyle": {
+                    "justifyContent": "flex-end"
+                  },
+                  "items": [
+                    "BillingDocumentID",
+                    "DocumentNumber_Key",
+                    "SaleContractNo",
+                    "OrderTypeID",
+                    "SaleAreaID",
+                    "SD_SaleOfficeID",
+                    "SD_SaleGroupsID",
+                    "OK"
+                  ]
+                }
+              }
+            }
+          }
+        ]
+      }, {
+        "title": "明细",
+        "items": [
+          {
+            "type": "element",
+            "elementType": "AutoTemplate",
+            "elementProps": {
+            "head":{},
+            "items":[
+                {
+                        "type": "element",
+                        "elementType": "GridView",
+                        "elementProps":{
+                            "yigoid": "grid0",
+                            "showHead": false,
+                            "headTitle": "销售订单明细",
+                            "useBodyScroll": true,
+                            "hideAction": false,
+                            "removeType": "column",
+                            "removeColumn": "DeleteDtl",
+                            "primaryKey": "MaterialID",
+                            "secondKey": [
+                               "PlantID"
+                             ],
+                            "tertiaryKey":[
+                               "BusinessQuantity"
+                             ],
+                             "newElement": {
+                              "type": "element",
+                              "elementType": "NativeButton",
+                              "elementProps": {
+                                "title":"新增"
+                              }
+                          }
+                        }
+                 }
+                
+          ]
+          }
+          }
+        ]
+      }],
+    "controls": {
+    },
+    "ignoredControl": []
+}

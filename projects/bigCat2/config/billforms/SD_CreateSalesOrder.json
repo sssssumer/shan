@@ -1,0 +1,46 @@
+{
+    "formTemplate": "normal",
+    "head": {
+      "type": "element",
+      "elementType": "Header",
+      "elementProps": {
+        "canBack": true,
+        "titleElement": {
+          "type": "element",
+          "elementType": "FormTitle",
+          "elementProps": {
+            "containerStyle": {
+              "alignItems": "center",
+              "justifyContent": "center"
+            }
+          }
+        }
+      }
+    },
+    "items": [
+      "BillingDocumentID",
+      "DocumentNumber_Key",
+      "SaleContractNo",
+      "OrderTypeID",
+      "SaleAreaID",
+      "SD_SaleOfficeID",
+      "SD_SaleGroupsID",
+      "BillKey4Tgt",
+      "TCodeID",
+      "SaleOrganizationID",
+      "DistributionChannelID",
+      "DivisionID",
+      "OK"
+    ],
+    "action": {
+    },
+    "foot": {
+      "type": "element",
+      "elementType": "SegementToolbar",
+      "elementProps": {
+        "showItems": ["UIClose" ]
+      }
+    },
+    "controls": {
+    }
+  }

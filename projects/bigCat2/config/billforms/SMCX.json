@@ -1,0 +1,101 @@
+{
+    "formTemplate": "normal",
+    "head": {
+        "type": "element",
+        "elementType": "Header",
+        "elementProps": {
+            "canBack": true,
+            "titleElement": {
+                "type": "element",
+                "elementType": "FormTitle",
+                "elementProps": {
+                    "containerStyle": {
+                        "alignItems": "center",
+                        "justifyContent": "center"
+                    }
+                }
+            }
+        }
+    },
+    "items": [
+        "TM",
+        "Query",
+        "Grid1"
+    ],
+    "action": {
+        "type": "element",
+        "elementType": "OpenFormActionButton",
+        "elementProps": {
+            "formKey": "SD_SaleOrder",
+            "modal": false,
+            "oid": "new",
+            "status":"NEW",
+            "style": {
+                "right": "50%",
+                "transform": "translateX(30px)"
+            }
+        }
+    },
+    "foot": {
+        "type": "element",
+        "elementType": "SegementToolbar",
+        "elementProps": {
+            "ignoreItems": ["NewPrint","NewPrePrint","Export","UIClose"]
+        }
+    },
+    "controls": {
+        "Grid1": {
+            "control": "GridView",
+            "clickMode":"dblclick",
+            "showHead": false,
+            "headTitle": "",
+            "useBodyScroll": true,
+            "hideAction": true,
+            "removeType": "column",
+            "removeColumn": "DeleteDtl",
+            "primaryKey": "DocumentNumber",
+            "secondKey": [
+                "BatchCode"
+            ],
+            "tertiaryKey":[
+                "SerialNo"
+            ],
+            "rightElement": {
+                "type": "element",
+                "elementType": "FlexBox",
+                "elementProps": {
+                    "direction": "column",
+                    "style": {
+                        "justifyContent": "space-between"
+                    },
+                    "items": [
+                        {
+                            "type": "element",
+                            "elementType": "SplitText",
+                            "elementProps": {
+                                "yigoid": "DocumentDate",
+                                "style": {
+                                    "fontSize": 12,
+                                    "paddingTop": 12,
+                                    "textAlign": "right"
+                                }
+                            }
+                        },
+                        {
+                            "type": "element",
+                            "elementType": "SplitText",
+                            "elementProps": {
+                                "yigoid": "mname",
+                                "style": {
+                                    "fontSize": 12,
+                                    "paddingTop": 12,
+                                    "textAlign": "right"
+                                }
+                            }
+                        }
+                    ]
+                }
+            }
+        }
+    }
+}
