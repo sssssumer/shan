@@ -1,0 +1,180 @@
+{
+    "formTemplate": "tabs",
+    "head": {
+        "type": "element",
+        "elementType": "Header",
+        "elementProps": {
+            "canBack": true,
+            "titleElement": {
+                "type": "element",
+                "elementType": "FormTitle",
+                "elementProps": {
+                    "containerStyle": {
+                        "alignItems": "center",
+                        "justifyContent": "center"
+                    }
+                }
+            }
+        }
+    },
+  "tabs": [
+    {
+    "title": "创建物料凭证",
+    "items": [
+        {
+        "type": "element",
+        "elementType": "Card",
+        "elementProps": {
+            "collapseable": false,
+            "headIcon": "",
+            "title": "基本信息",
+            "content": {
+            "type": "element",
+            "elementType": "CellLayoutTemplate",
+            "elementProps": {
+                "textStyle": {
+                "textAlign": "right",
+                "justifyContent": "flex-end"
+                },
+                "titleStyle": {
+                "justifyContent": "flex-start",
+                "fontSize": "15",
+                "color": "#666666"
+                },
+                "layoutStyle": {
+                "justifyContent": "flex-end"
+                },
+                "items": [
+                    "TransEvent_NODB4Other",
+                    "ReferenceDocument_NODB4Other",
+                    "DocumentNumber_Cond",
+                    "ItemNumberOfSearch_NODB4Other",
+                    "PlantID_NODB4Other",
+                    "MovementTypeID_NODB4Other",
+                    "Execute"
+                ]
+            }
+            }
+        }
+        }
+    ]
+    },
+    {
+        "title": "采购抬头",
+        "items": [
+            {
+            "type": "element",
+            "elementType": "Card",
+            "elementProps": {
+                "collapseable": false,
+                "headIcon": "",
+                "title": "基本信息",
+                "content": {
+                "type": "element",
+                "elementType": "CellLayoutTemplate",
+                "elementProps": {
+                    "textStyle": {
+                    "textAlign": "right",
+                    "justifyContent": "flex-end"
+                    },
+                    "titleStyle": {
+                    "justifyContent": "flex-start",
+                    "fontSize": "15",
+                    "color": "#666666"
+                    },
+                    "layoutStyle": {
+                    "justifyContent": "flex-end"
+                    },
+                    "items": [
+                        "DocumentDate",
+                        "PostingDate",
+                        "DeliveryNo",
+                        "BillofLadingNo",
+                        "DocumentNumber",
+                        "Notes"
+                    ]
+                }
+                }
+            }
+            }
+        ]
+    },
+    {
+        "title": "采购明细表",
+        "items": [
+          {
+            "type": "element",
+            "elementType": "AutoTemplate",
+            "elementProps": {
+              "head": {},
+              "items": [
+                {
+                  "type": "element",
+                  "elementType": "GridView",
+                  "elementProps": {
+                    "yigoid": "grid0",
+                    "showHead": false,
+                    "headTitle": "采购明细表",
+                    "useBodyScroll": true,
+                    "hideAction": false,
+                    "removeType": "column",
+                    "removeColumn": "DeleteDtl",
+                    "primaryKey": "MaterialID",
+                    "secondKey": [
+                      "NotesDtl"
+                    ],
+                    "rightElement": {
+                      "type": "element",
+                      "elementType": "FlexBox",
+                      "elementProps": {
+                        "direction": "column",
+                        "style": {
+                          "justifyContent": "space-between"
+                        },
+                        "items": [
+                          {
+                            "type": "element",
+                            "elementType": "SplitText",
+                            "elementProps": {
+                              "caption" :"收货数量：",
+                              "yigoid": "BusinessQuantity",
+                              "style": {
+                                "fontSize": 12,
+                                "textAlign": "right"
+                              }
+                            }
+                          },
+                          {
+                            "type": "element",
+                            "elementType": "ShowCaptionText",
+                            "elementProps": {
+                              "caption" :"收货单位：",
+                              "yigoid": "BusinessUnitID",
+                              "style": {
+                                "fontSize": 12,
+                                "textAlign": "right"
+                              }
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  }
+                }
+              ]
+            }
+          }
+        ]
+      }
+  ],
+    "foot": {
+        "type": "element",
+        "elementType": "SegementToolbar",
+        "elementProps": {
+            "showItems":["BillNew","BillEdit","BillSave","BillCancel","BillDelete"]
+        }
+    },
+    "controls": {
+    
+    }
+}

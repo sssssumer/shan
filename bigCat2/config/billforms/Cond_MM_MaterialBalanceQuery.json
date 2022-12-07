@@ -1,0 +1,46 @@
+{
+    "formTemplate": "normal",
+    "head": {
+        "type": "element",
+        "elementType": "Header",
+        "elementProps": {
+            "canBack": true,
+            "titleElement": {
+                "type": "element",
+                "elementType": "FormTitle",
+                "elementProps": {
+                    "containerStyle": {
+                        "alignItems": "center",
+                        "justifyContent": "center"
+                    }
+                }
+            }
+        }
+    },
+    "items": [
+        "PlantID",
+        "MaterialID",
+        "StorageLocationID",
+        "BatchCode",
+        "StorageLocationID",
+        "SpecialIdentity",
+        "StockType",
+        "FiscalYearPeriod_From_NODB4Other",
+        "FiscalYearPeriod_To_NODB4Other",
+        "MaterialGroupID",
+        "BShowCodition"
+    ],
+    "foot": {
+        "type": "element",
+        "elementType": "SegementToolbarButton",
+        "elementProps": {
+            "buttons": [
+                {
+                    "key": "OK",
+                    "caption": "确定"
+                },
+                "Cancel"
+            ]
+        }
+    }
+}

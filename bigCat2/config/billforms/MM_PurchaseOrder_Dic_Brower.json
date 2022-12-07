@@ -1,0 +1,57 @@
+{
+    "formTemplate": "normal",
+    "head": {
+      "type": "element",
+      "elementType": "Header",
+      "elementProps": {
+        "canBack": true,
+        "titleElement": {
+          "type": "element",
+          "elementType": "FormTitle",
+          "elementProps": {
+            "containerStyle": {
+              "alignItems": "center",
+              "justifyContent": "center"
+            }
+          }
+        }
+      }
+    },
+    "items": [
+      "DocumentTypesID_Head",
+      "PurchasingOrganizationID1_Head",
+      "PurchasingGroupID1_Head",
+      "DocumentNumber_Head",
+      {
+        "type": "element",
+        "elementType": "GridView",
+        "elementProps": {
+          "yigoid": "grid0",
+          "clickMode": "dblclick",
+          "removeable": false,
+          "showHead": false,
+          "headTitle": "",
+          "useBodyScroll": true,
+          "hideAction": false,
+          "primaryKey": "DocumentNumber",
+          "secondKey": [
+            "DocumentTypesID",
+            "PurchasingGroupID",
+            "PurchasingOrganizationID"
+          ]
+        }     
+      }
+    ],
+    "action": {
+    },
+    "foot": {
+      "type": "element",
+      "elementType": "SegementToolbar",
+      "elementProps": {
+        "showItems": [ "Query", "UIClose" ]
+      }
+    },
+    "controls": {
+
+    }
+  }

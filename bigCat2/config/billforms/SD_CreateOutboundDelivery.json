@@ -1,0 +1,40 @@
+{
+    "formTemplate": "normal",
+    "head": {
+      "type": "element",
+      "elementType": "Header",
+      "elementProps": {
+        "canBack": true,
+        "titleElement": {
+          "type": "element",
+          "elementType": "FormTitle",
+          "elementProps": {
+            "containerStyle": {
+              "alignItems": "center",
+              "justifyContent": "center"
+            }
+          }
+        }
+      }
+    },
+    "items": [
+      "ShippingPointID",
+      "SelectionDate",
+      "DocumentNumber_Key",
+      "FromItem",
+      "ToItem",
+      "SD_DeliveryBillingTypeID",
+      "OK"
+    ],
+    "action": {
+    },
+    "foot": {
+      "type": "element",
+      "elementType": "SegementToolbar",
+      "elementProps": {
+        "showItems": [ "OK", "UIClose" ]
+      }
+    },
+    "controls": {
+    }
+  }

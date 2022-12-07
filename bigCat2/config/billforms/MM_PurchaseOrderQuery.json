@@ -1,0 +1,100 @@
+{
+    "formTemplate": "normal",
+    "head": {
+        "type": "element",
+        "elementType": "Header",
+        "elementProps": {
+            "canBack": true,
+            "titleElement": {
+                "type": "element",
+                "elementType": "FormTitle",
+                "elementProps": {
+                    "containerStyle": {
+                        "alignItems": "center",
+                        "justifyContent": "center"
+                    }
+                }
+            }
+        }
+    },
+    "items": [
+        "grid0"
+    ],
+    "action": {
+        "type": "element",
+        "elementType": "OpenFormActionButton",
+        "elementProps": {
+            "formKey": "MM_PurchaseOrder",
+            "modal": false,
+            "oid": "new",
+            "status":"NEW",
+            "style": {
+                "right": "50%",
+                "transform": "translateX(30px)"
+            }
+        }
+    },
+    "foot": {
+        "type": "element",
+        "elementType": "SegementToolbar",
+        "elementProps": {
+            "ignoreItems": ["NewPrint","NewPrePrint","Export","UIClose"]
+        }
+    },
+    "controls": {
+        "grid0": {
+            "control": "GridView",
+            "clickMode":"dblclick",
+            "showHead": false,
+            "headTitle": "",
+            "useBodyScroll": true,
+            "hideAction": true,
+            "removeType": "normal",
+            "removeColumn": "DeleteDtl",
+            "removeable":true,
+            "primaryKey": "No",
+            "secondKey": [
+                "PurchasingOrganizationID"
+            ],
+            "tertiaryKey":[
+                "VendorID"
+            ],
+            "rightElement": {
+                "type": "element",
+                "elementType": "FlexBox",
+                "elementProps": {
+                    "direction": "column",
+                    "style": {
+                        "justifyContent": "space-between"
+                    },
+                    "items": [
+                        {
+                            "type": "element",
+                            "elementType": "SplitText",
+                            "elementProps": {
+                                "yigoid": "BillDate",
+                                "style": {
+                                    "fontSize": 12,
+                                    "paddingTop": 12,
+                                    "textAlign": "right"
+                                }
+                            }
+                        },
+                        {
+                            "type": "element",
+                            "elementType": "SplitText",
+                            "elementProps": {
+                                "yigoid": "BillTypeID",
+                                "style": {
+                                    "fontSize": 12,
+                                    "paddingTop": 12,
+                                    "textAlign": "right"
+                                }
+                            }
+                        }
+                    ]
+                }
+            }
+        }
+    }
+}

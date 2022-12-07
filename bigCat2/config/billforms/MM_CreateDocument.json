@@ -1,0 +1,51 @@
+{
+  "formTemplate": "normal",
+  "head": {
+    "type": "element",
+    "elementType": "Header",
+    "elementProps": {
+      "canBack": true,
+      "titleElement": {
+        "type": "element",
+        "elementType": "FormTitle",
+        "elementProps": {
+          "containerStyle": {
+            "alignItems": "center",
+            "justifyContent": "center"
+          }
+        }
+      }
+    }
+  },
+  "items": [
+    "DocumentDate",
+    "PostingDate",
+    "HeadText",
+    "BusinessType",
+    "DefaultValue",
+    "MoveTypeID_NODB4Other",
+    "PlantID",
+    "StorageLocationID",
+    "Reason4MovementID",
+    "IsSuggestZeroLines",
+    "SpecialIdentity"
+  ],
+  "action": {
+  },
+
+  "foot": {
+    "type": "element",
+    "elementType": "SegementToolbarButton",
+    "elementProps": {
+        "buttons": [
+            {
+                "key": "CmdOK",
+                "caption": "确定"
+            },
+            "Cancel"
+        ]
+    }
+},
+  "controls": {
+  }
+}

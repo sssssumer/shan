@@ -1,0 +1,19 @@
+{
+  "MM_GoodsReceipt": {
+    "T_Code": "MIGO"
+  },
+  "MM_CreateDocument": {
+      "T_Code": "MB1C"
+    },
+    "MM_CreateDocument1": {
+      "T_Code": "MB1A"
+    },
+    "SD_CreateSalesOrder":{
+      "T_Code":"VA01",
+      "SDDocumentCategory":"'C','H','I','K','L'",
+      "FormKey":"SD_SaleOrder"
+    }
+      
+
+
+}
